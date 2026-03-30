@@ -1,526 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Shivani R. Rajebhosale - Digital Marketing & Integrated Campaign Strategist" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="description"
+    content="Portfolio of Shivani R. Rajebhosale - Digital Marketing & Integrated Campaign Strategist" />
+  <meta name="theme-color" content="#1c1c27" />
   <title>Shivani Rajebhosale | Digital Marketing Portfolio</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
     :root {
-      --bg: #081122;
-      --bg-soft: #0f172a;
-      --panel: rgba(15, 23, 42, 0.86);
-      --panel-2: rgba(30, 41, 59, 0.82);
-      --line: rgba(148, 163, 184, 0.18);
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-2: #22c55e;
-      --accent-3: #f59e0b;
-      --shadow: 0 20px 50px rgba(2, 8, 23, 0.45);
-      --radius: 22px;
-      --radius-sm: 14px;
-      --max-width: 1180px;
+      --bg: #1c1c27;
+      --card-bg: rgba(23, 23, 33, 0.83);
+      --card-border: rgba(133, 76, 230, 0.15);
+      --accent: #854ce6;
+      --text: #F2F3F4;
+      --muted: #b1b2ad;
+      --radius: 16px;
+      --max-width: 1100px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    a { text-decoration: none; color: inherit; }
+    
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Poppins', sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 30%),
-        radial-gradient(circle at top right, rgba(34, 197, 94, 0.12), transparent 28%),
-        linear-gradient(135deg, #020617 0%, #081122 35%, #0f172a 100%);
+      background-color: var(--bg);
       min-height: 100vh;
       line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(133, 76, 230, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(133, 76, 230, 0.1) 0%, transparent 40%);
+      background-attachment: fixed;
     }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; }
 
     .container {
       width: min(calc(100% - 32px), var(--max-width));
       margin: 0 auto;
     }
 
+    /* Navbar */
     .nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      backdrop-filter: blur(14px);
-      background: rgba(2, 6, 23, 0.64);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+      backdrop-filter: blur(15px);
+      background: rgba(28, 28, 39, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
-
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
+      padding: 16px 0;
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
       font-weight: 700;
-      letter-spacing: 0.2px;
+      font-size: 1.2rem;
     }
-
     .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent), #2563eb);
-      box-shadow: var(--shadow);
-      font-size: 0.96rem;
-      color: white;
-      font-weight: 800;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      padding: 10px 14px;
-      border-radius: 999px;
-      transition: 0.25s ease;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus {
-      color: white;
-      background: rgba(56, 189, 248, 0.12);
-      outline: none;
-    }
-
-    .hero {
-      padding: 72px 0 34px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-main {
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .hero-main::after {
-      content: "";
-      position: absolute;
-      inset: auto -80px -80px auto;
-      width: 240px;
-      height: 240px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(56,189,248,0.18), transparent 70%);
-      z-index: -1;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(133, 76, 230, 0.5);
     }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.12);
-      color: #cbeeff;
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.1px;
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a {
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
     }
+    .nav-links a:hover { color: var(--accent); }
 
-    h1 {
-      font-size: clamp(2.3rem, 4vw, 4.2rem);
-      line-height: 1.05;
-      margin: 18px 0 16px;
-      letter-spacing: -0.03em;
-    }
+    /* Sections */
+    section { padding: 60px 0; }
+    .section-head { text-align: center; margin-bottom: 50px; }
+    .section-head h2 { font-size: 2.5rem; font-weight: 700; margin: 0 0 12px; }
+    .section-head p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 
-    .gradient-text {
-      background: linear-gradient(135deg, #f8fafc 0%, #7dd3fc 45%, #4ade80 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-copy {
-      font-size: 1.06rem;
-      color: #cbd5e1;
-      max-width: 62ch;
-      margin-bottom: 24px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 22px;
-    }
-
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-radius: 14px;
-      font-weight: 700;
-      border: 1px solid transparent;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
-
-    .btn:hover { transform: translateY(-2px); }
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #2563eb);
+      background: linear-gradient(225deg, #ac5fff 0%, #7127ba 100%);
       color: white;
-      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+      box-shadow: 0 4px 15px rgba(133, 76, 230, 0.4);
     }
-
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(133, 76, 230, 0.6);
+    }
     .btn-secondary {
-      background: rgba(148, 163, 184, 0.08);
-      border-color: rgba(148, 163, 184, 0.18);
-      color: var(--text);
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 26px;
-    }
-
-    .stat {
-      padding: 18px 16px;
-      border-radius: 18px;
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(148, 163, 184, 0.12);
-    }
-
-    .stat-icon {
-      width: 28px;
-      height: 28px;
-      margin-bottom: 12px;
+      background: transparent;
+      border: 1px solid var(--accent);
       color: var(--accent);
-      opacity: 0.9;
     }
+    .btn-secondary:hover { background: rgba(133, 76, 230, 0.1); }
 
-    .stat-icon.trend-down { color: var(--accent-2); }
-    .stat-icon.leads { color: var(--accent-3); }
-    .stat-icon.budget { color: #a855f7; }
-
-    .stat .value {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .stat .label {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .hero-side {
-      padding: 28px;
+    /* Hero */
+    .hero { padding: 100px 0 60px; text-align: center; }
+    .hero-content {
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      justify-content: space-between;
-    }
-
-    .profile-top {
-      display: flex;
       align-items: center;
-      gap: 18px;
-    }
-
-    .avatar {
-      width: 84px;
-      height: 84px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, rgba(56,189,248,0.22), rgba(34,197,94,0.2));
-      border: 1px solid rgba(148,163,184,0.15);
-      display: grid;
-      place-items: center;
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: #fff;
-    }
-
-    .profile-top h2 {
-      margin: 0;
-      font-size: 1.35rem;
-    }
-
-    .muted { color: var(--muted); }
-
-    .pill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(148, 163, 184, 0.08);
-      border: 1px solid rgba(148, 163, 184, 0.12);
-      color: #dbeafe;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    section {
-      padding: 18px 0 8px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
       gap: 20px;
-      margin-bottom: 18px;
+      max-width: 800px;
+      margin: 0 auto;
     }
-
-    .section-head h2 {
-      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
-      margin: 0 0 4px;
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 60ch;
-    }
-
-    .grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    .about-grid {
-      grid-template-columns: 1.15fr 0.85fr;
-    }
-
-    .panel {
-      padding: 28px;
-    }
-
-    .bullet-list {
-      margin: 0;
-      padding-left: 18px;
-      color: #d6e2f1;
-    }
-
-    .bullet-list li + li { margin-top: 10px; }
-
-    .skills-grid,
-    .project-grid,
-    .experience-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .skill-block {
-      padding: 24px;
-    }
-
-    .skill-block h3,
-    .project-card h3,
-    .experience-card h3,
-    .timeline-card h3 { margin: 0 0 10px; }
-
-    .project-card,
-    .experience-card,
-    .timeline-card {
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: 0 auto auto 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    }
-
-    .project-image-wrapper {
-      overflow: hidden;
-      border-radius: 16px;
-      margin-bottom: 22px;
-      border: 1px solid var(--line);
-    }
-
-    .project-image-wrapper img {
-      width: 100%;
-      height: 220px;
+    .hero-avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
       object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
+      border: 4px solid var(--bg);
+      box-shadow: 0 0 30px rgba(133, 76, 230, 0.6);
     }
-
-    .project-card:hover .project-image-wrapper img {
-      transform: scale(1.05);
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 16px 0;
-    }
-
-    .tag {
-      font-size: 0.82rem;
-      color: #dff6ff;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      border-radius: 999px;
-      padding: 7px 10px;
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin: 10px 0; }
+    .hero h2 { font-size: 1.8rem; font-weight: 600; margin: 0 0 15px; }
+    .typewriter-text { color: var(--accent); }
+    .cursor { color: var(--accent); font-weight: 700; animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero-copy { color: var(--muted); font-size: 1.1rem; margin-bottom: 30px; }
+    .hero-actions { display: flex; gap: 16px; margin-bottom: 30px; }
+    .hero-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+    .hero-stat-pill {
+      background: rgba(133, 76, 230, 0.1);
+      border: 1px solid rgba(133, 76, 230, 0.3);
+      padding: 10px 18px;
+      border-radius: 50px;
       font-weight: 600;
     }
+    .hero-stat-pill span { color: var(--accent); font-weight: 700; font-size: 1.1rem; margin-right: 8px; }
 
+    /* Cards Framework */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Projects Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .project-card {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(133, 76, 230, 0.2); }
+    .project-image-wrapper { width: 100%; height: 200px; border-radius: 12px; margin-bottom: 16px; overflow: hidden; }
+    .project-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+    .project-card h3 { font-size: 1.4rem; font-weight: 600; margin: 0 0 10px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .tag { font-size: 0.8rem; color: var(--accent); background: rgba(133, 76, 230, 0.1); padding: 4px 10px; border-radius: 50px; }
+    .bullet-list { padding-left: 18px; color: var(--muted); margin: 0 0 16px; font-size: 0.95rem; flex-grow: 1; }
+    .bullet-list li { margin-bottom: 8px; }
     .metric-box {
-      margin-top: 18px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: rgba(34, 197, 94, 0.1);
-      border: 1px solid rgba(34, 197, 94, 0.2);
-      color: #dcfce7;
-      font-weight: 700;
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .project-links a {
-      padding: 10px 12px;
-      border-radius: 12px;
-      background: rgba(148, 163, 184, 0.08);
-      border: 1px solid rgba(148, 163, 184, 0.14);
-      color: #e5eef9;
-      font-size: 0.92rem;
+      margin-top: auto;
+      background: rgba(133, 76, 230, 0.1);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.9rem;
       font-weight: 600;
+      text-align: center;
+      border: 1px solid rgba(133, 76, 230, 0.2);
     }
 
+    /* Experience Timeline */
     .timeline {
       position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+    .timeline-card { padding: 30px; margin-bottom: 30px; position: relative; }
+    .timeline-card::before {
+      content: '';
+      position: absolute;
+      left: -48px;
+      top: 30px;
+      width: 18px;
+      height: 18px;
+      background: var(--bg);
+      border: 3px solid var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent);
+    }
+    .timeline-card h3 { font-size: 1.5rem; margin: 0 0 5px; }
+    .timeline-card .org { color: var(--muted); font-size: 1.1rem; margin-bottom: 15px; font-weight: 500; }
+    .timeline-card .period { font-size: 0.85rem; padding: 4px 10px; border-radius: 50px; border: 1px solid rgba(133, 76, 230, 0.3); color: var(--accent); display: inline-block; margin-bottom: 15px; }
+
+    /* Skills Grid */
+    .skills-grid {
       display: grid;
-      gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-
-    .timeline-card .period {
-      color: #7dd3fc;
-      font-weight: 700;
-      font-size: 0.92rem;
-      display: inline-block;
-      margin-bottom: 8px;
-    }
-
-    .timeline-card .org {
-      color: #cbd5e1;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .contact-card {
-      padding: 30px;
-      text-align: center;
-      background: linear-gradient(135deg, rgba(8, 17, 34, 0.95), rgba(15, 23, 42, 0.82));
-    }
-
-    .contact-actions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .footer {
-      padding: 32px 0 50px;
+    .skill-block { padding: 30px; text-align: center; }
+    .skill-block h3 { margin: 0 0 24px; font-size: 1.5rem; }
+    .pill-group { justify-content: center; display: flex; flex-wrap: wrap; gap: 12px; }
+    .pill {
+      background: transparent;
+      border: 1px solid rgba(133, 76, 230, 0.5);
       color: var(--muted);
-      text-align: center;
-      font-size: 0.95rem;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+    .pill:hover { border-color: var(--accent); color: var(--text); box-shadow: 0 0 15px rgba(133, 76, 230, 0.2); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .about-card { padding: 40px; }
+
+    .contact-card { max-width: 800px; margin: 0 auto; padding: 60px 40px; text-align: center; }
+    .contact-card h2 { font-size: 2.5rem; margin-bottom: 20px; }
+    .contact-card p { font-size: 1.1rem; color: var(--muted); margin-bottom: 40px; }
+    .contact-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+
+    .footer { text-align: center; padding: 30px 0; color: var(--muted); font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .timeline { padding-left: 20px; }
+      .timeline-card::before { left: -28px; width: 14px; height: 14px; }
     }
 
-    .small {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 1024px) {
-      .hero-grid,
-      .about-grid,
-      .skills-grid,
-      .project-grid,
-      .experience-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-stats { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 700px) {
-      .nav-inner { flex-direction: column; align-items: flex-start; }
-      .hero { padding-top: 42px; }
-      .hero-main,
-      .hero-side,
-      .panel,
-      .project-card,
-      .experience-card,
-      .timeline-card,
-      .contact-card { padding: 22px; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-      h1 { font-size: 2.3rem; }
-    }
-
-    @media (max-width: 480px) {
-      .container { width: min(calc(100% - 20px), var(--max-width)); }
-      .hero-stats { grid-template-columns: 1fr; }
-      .hero-actions,
-      .contact-actions { flex-direction: column; }
-      .btn { width: 100%; }
+    #bg-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -10;
+      pointer-events: none;
     }
   </style>
 </head>
+
 <body>
+  <canvas id="bg-canvas"></canvas>
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#home" class="brand" aria-label="Homepage">
-        <span class="brand-mark">SR</span>
+        <img src="profile-pic.jpeg" alt="SR" class="brand-mark" />
         <span>Shivani Rajebhosale</span>
       </a>
       <div class="nav-links">
@@ -533,121 +295,51 @@
     </div>
   </nav>
 
-  <header class="hero" id="home">
-    <div class="container hero-grid">
-      <article class="card hero-main">
-        <!-- <span class="eyebrow">Digital Marketing • CRM • SEO • Performance Growth</span> -->
-        <!-- <h1>
-          Driving <span class="gradient-text">measurable B2B growth</span>
-          through performance marketing, CRM workflows, and insight-led campaigns.
-        </h1> -->
-        <p class="hero-copy">
-          I am Shivani R. Rajebhosale, a Navi-Mumbai based Digital Marketing & Integrated Campaign Strategist with 3+ years of experience across paid media, SEO, Salesforce CRM, email/WhatsApp journeys, GA4 reporting, and offline-to-online lead activation.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:rajebhosaleshivani@gmail.com">Let’s connect</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/shivani-rajebhosale-b117a8179" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
-        </div>
-        <div class="hero-stats" aria-label="highlight metrics">
-          <div class="stat">
-            <svg class="stat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
-            <span class="value">30%</span>
-            <span class="label">Organic traffic growth</span>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon trend-down" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
-            </svg>
-            <span class="value">20%</span>
-            <span class="label">Lower cost per lead</span>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon leads" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <span class="value">150+</span>
-            <span class="label">Qualified B2B leads/month</span>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon budget" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <span class="value">₹1L+</span>
-            <span class="label">Monthly paid media budget</span>
-          </div>
-        </div>
-      </article>
+    <header class="hero" id="home">
+    <div class="container hero-content">
+      <img src="profile-pic.jpeg" alt="Shivani R. Rajebhosale" class="hero-avatar" />
+      <h1>Hi, I am <br/>Shivani Rajebhosale</h1>
+      <h2>I am a <span class="typewriter-text" id="typewriter"></span><span class="cursor">|</span></h2>
+      <p class="hero-copy">
+        I am a motivated and versatile individual, always eager to take on new challenges. With a passion for performance marketing, I build CRM-led nurturing and impactful digital campaigns to deliver high-quality growth.
+      </p>
+      
+      <div class="hero-actions">
+        <!-- Replaced with a pill styled button -->
+        <a class="btn btn-primary" href="mailto:rajebhosaleshivani@gmail.com" style="border-radius: 50px; font-weight: 600; font-size: 1.1rem; padding: 16px 36px;">Check Resume</a>
+      </div>
 
-      <aside class="card hero-side">
-        <div>
-          <div class="profile-top">
-            <div class="avatar">SR</div>
-            <div>
-              <h2>Digital Marketing Strategist</h2>
-              <p class="muted">Mumbai, India</p>
-            </div>
-          </div>
-          <p>
-            Specialized in performance campaigns, funnel optimization, CRM-led nurturing, analytics reporting, and brand activation for B2B growth teams.
-          </p>
-        </div>
-
-        <div>
-          <p class="small">Core stack</p>
-          <div class="pill-group">
-            <span class="pill">Google Ads</span>
-            <span class="pill">Meta Ads</span>
-            <span class="pill">Salesforce CRM</span>
-            <span class="pill">GA4</span>
-            <span class="pill">Looker Studio</span>
-            <span class="pill">SEO</span>
-            <span class="pill">WordPress</span>
-            <span class="pill">Canva</span>
-          </div>
-        </div>
-
-        <div>
-          <p class="small">Focus areas</p>
-          <ul class="bullet-list">
-            <li>Integrated B2B demand generation</li>
-            <li>Lead segmentation and nurture workflows</li>
-            <li>Campaign reporting for leadership decisions</li>
-            <li>Event, expo, and post-event marketing journeys</li>
-          </ul>
-        </div>
-      </aside>
+      <div class="hero-stats">
+        <div class="hero-stat-pill"><span>30%</span> Organic traffic growth</div>
+        <div class="hero-stat-pill"><span>20%</span> Lower cost per lead</div>
+        <div class="hero-stat-pill"><span>150+</span> B2B leads/month</div>
+        <div class="hero-stat-pill"><span>₹1L+</span> Media budget</div>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id="about">
+        <section id="about">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>About Me</h2>
-            <!-- <p>A portfolio aligned for digital marketing, growth, CRM, and integrated campaign roles.</p> -->
+            <h2>About</h2>
           </div>
         </div>
 
         <div class="grid about-grid">
-          <article class="card panel">
+          <article class="card about-card">
             <p>
               I build growth systems that connect traffic, campaigns, lead journeys, and reporting into one measurable workflow. My work spans SEO, Google & Meta Ads, Salesforce CRM, WhatsApp outreach, email sequencing, website optimization, and campaign analytics.
             </p>
             <p>
               At S D Fine-Chem Limited, I lead integrated campaigns, manage Salesforce-led lead tracking and segmentation, support website and chatbot improvements, build GA4 dashboards, and handle post-expo lead nurturing. My background also includes lead funnel operations, digital outreach, and campaign analytics across education and agency environments.
             </p>
-          </article>
-
-          <article class="card panel">
-            <h3>What I bring</h3>
-            <ul class="bullet-list">
+            <ul class="bullet-list" style="margin-top: 10px;">
               <li>Performance-first mindset with strong reporting discipline</li>
               <li>CRM and nurture workflow thinking beyond just lead generation</li>
               <li>Experience balancing online campaigns with offline activation support</li>
-              <li>Ability to convert marketing data into leadership-ready dashboards and case studies</li>
+              <li>Ability to convert marketing data into leadership-ready dashboards</li>
             </ul>
           </article>
         </div>
@@ -666,7 +358,9 @@
         <div class="grid project-grid">
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GA4 Dashboard Design" loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="GA4 Dashboard Design" loading="lazy" />
             </div>
             <h3>📊 GA4 Marketing Performance Dashboard</h3>
             <!-- <p>
@@ -692,7 +386,9 @@
 
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paid Media Audit" loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Paid Media Audit" loading="lazy" />
             </div>
             <h3>💰 Paid Media Campaign Audit Report</h3>
             <!-- <p>
@@ -718,7 +414,9 @@
 
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CRM Lead Workflow" loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="CRM Lead Workflow" loading="lazy" />
             </div>
             <h3>🤖 CRM Lead Segmentation & Nurturing Workflow</h3>
             <!-- <p>
@@ -744,7 +442,9 @@
 
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SEO Benchmarking" loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="SEO Benchmarking" loading="lazy" />
             </div>
             <h3>🔍 SEO & Competitor Benchmarking Report</h3>
             <!-- <p>
@@ -770,7 +470,9 @@
 
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Email Marketing Templates" loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Email Marketing Templates" loading="lazy" />
             </div>
             <h3>📧 Email Marketing Case Study & HTML Templates</h3>
             <!-- <p>
@@ -796,7 +498,9 @@
 
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Marketing KPI Tracker" loading="lazy" />
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Marketing KPI Tracker" loading="lazy" />
             </div>
             <h3>📋 Marketing KPI Tracker & Monthly Report Template</h3>
             <!-- <p>
@@ -823,114 +527,79 @@
       </div>
     </section>
 
-<section id="experience">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2>Experience Snapshot</h2>
-        <!-- <p>Career progression across in-house marketing, consulting, education funnel operations, and agency execution.</p> -->
-      </div>
-    </div>
-
-    <div class="timeline">
-
-      <!-- SDFINE -->
-      <article class="card timeline-card">
-        <span class="period">July 2024 – Present</span>
-        <h3>Digital Marketing Specialist</h3>
-        <div class="org">S D Fine-Chem Limited (HO)</div>
-        <ul class="bullet-list">
-          <li>Lead integrated campaigns across SEO, paid media, email, and WhatsApp marketing</li>
-          <li>Manage Salesforce CRM for lead tracking, segmentation, and sales-marketing alignment</li>
-          <li>Support website revamp, UX improvements, chatbot integration, and post-event nurture flows</li>
-          <li>Build GA4 dashboards and present performance insights to leadership</li>
-        </ul>
-      </article>
-
-      <!-- YANGPOO EDUCATION -->
-      <article class="card timeline-card">
-      
-        <span class="period">Mar 2024 – Jun 2024</span>
-      
-        <h3>Growth Consultant</h3>
-      
-        <div class="org">Yangpoo Education</div>
-      
-        <p class="muted">
-          EdTech organisation offering executive and professional education programmes.
-        </p>
-      
-        <ul class="bullet-list">
-          <li>Developed market expansion strategies using benchmarking and KPI tracking</li>
-          <li>Conducted ROI analysis to inform investment and channel decisions</li>
-        </ul>
-      
-      </article>
-      
-      
-      <!-- JARO EDUCATION -->
-      <article class="card timeline-card">
-      
-        <span class="period">Sep 2023 – Feb 2024</span>
-      
-        <h3>Management Trainee (Advisor)</h3>
-      
-        <div class="org">JARO Education</div>
-      
-        <p class="muted">
-          EdTech organisation delivering executive education programmes for working professionals.
-        </p>
-      
-        <ul class="bullet-list">
-          <li>Managed lead lifecycle using LeadSquared CRM for executive education programmes</li>
-          <li>Supported digital outreach targeting working professionals and corporates</li>
-        </ul>
-      
-      </article>
-
-      <!-- WEBXPRESS -->
-      <article class="card timeline-card">
-        <span class="period">May 2022 – Jul 2022</span>
-        <h3>Digital Marketing Intern</h3>
-        <div class="org">WebXpress</div>
-
-        <p class="muted">
-          B2B logistics SaaS company serving transporters and 3PLs across India.
-        </p>
-
-        <ul class="bullet-list">
-          <li>Executed Meta Ads campaigns for B2B lead generation</li>
-          <li>Supported SEO research and tracking via Google Analytics and Search Console</li>
-          <li>Created Canva creatives and edited marketing videos</li>
-        </ul>
-      </article>
-
-      <!-- FRIENDS ADVERTISING -->
-      <article class="card timeline-card">
-        <span class="period">Sep 2020 – Sep 2021</span>
-        <h3>Digital Marketing Associate</h3>
-        <div class="org">Friends Advertising</div>
-
-        <p class="muted">
-          Full-service advertising agency offering digital and traditional media solutions.
-        </p>
-
-        <ul class="bullet-list">
-          <li>Executed multi-channel campaigns across social and paid platforms</li>
-          <li>Monitored KPI trends and helped optimise campaign performance</li>
-          <li>Collaborated with creative and client servicing teams for timely delivery</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-    <section id="skills">
+        <section id="experience">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Skills & Tools</h2>
-            <!-- <p>Positioned for digital marketing strategist, performance marketing, CRM, and growth roles.</p> -->
+            <h2>Experience</h2>
+            <p>My work experience working on different campaigns and performance strategies.</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+
+          <article class="card timeline-card">
+            <span class="period">July 2024 – Present</span>
+            <h3>Digital Marketing Specialist</h3>
+            <div class="org">S D Fine-Chem Limited (HO), Mumbai</div>
+            <ul class="bullet-list">
+              <li>Lead integrated campaigns across SEO, paid media, email, and WhatsApp marketing.</li>
+              <li>Manage Salesforce CRM for lead tracking, segmentation, and sales-marketing alignment.</li>
+              <li>Support website revamp, UX improvements, chatbot integration, and post-event nurture flows.</li>
+              <li>Build GA4 dashboards and present performance insights to leadership.</li>
+            </ul>
+          </article>
+
+          <article class="card timeline-card">
+            <span class="period">Mar 2024 – Jun 2024</span>
+            <h3>Growth Consultant</h3>
+            <div class="org">Yangpoo Education</div>
+            <ul class="bullet-list">
+              <li>Developed market expansion strategies using benchmarking and KPI tracking.</li>
+              <li>Conducted ROI analysis to inform investment and channel decisions for EdTech products.</li>
+            </ul>
+          </article>
+
+          <article class="card timeline-card">
+            <span class="period">Sep 2023 – Feb 2024</span>
+            <h3>Management Trainee (Advisor)</h3>
+            <div class="org">JARO Education</div>
+            <ul class="bullet-list">
+              <li>Managed lead lifecycle using LeadSquared CRM for executive education programmes.</li>
+              <li>Supported digital outreach targeting working professionals and corporates.</li>
+            </ul>
+          </article>
+
+          <article class="card timeline-card">
+            <span class="period">May 2022 – Jul 2022</span>
+            <h3>Digital Marketing Intern</h3>
+            <div class="org">WebXpress</div>
+            <ul class="bullet-list">
+              <li>Executed Meta Ads campaigns for B2B lead generation targeting transporters and 3PLs.</li>
+              <li>Supported SEO research and tracking via Google Analytics and Search Console.</li>
+              <li>Created Canva creatives and edited marketing videos for social branding.</li>
+            </ul>
+          </article>
+
+          <article class="card timeline-card">
+            <span class="period">Sep 2020 – Sep 2021</span>
+            <h3>Digital Marketing Associate</h3>
+            <div class="org">Friends Advertising</div>
+            <ul class="bullet-list">
+              <li>Executed multi-channel campaigns across social and paid platforms.</li>
+              <li>Monitored KPI trends and helped optimise campaign performance.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+        <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Skills</h2>
+            <p>Here are some of my skills on which I have been working on for over the years.</p>
           </div>
         </div>
 
@@ -940,48 +609,45 @@
             <div class="pill-group">
               <span class="pill">Performance Marketing</span>
               <span class="pill">Google Ads</span>
-              <span class="pill">Meta Ads Manager</span>
+              <span class="pill">Meta Ads</span>
               <span class="pill">SEO</span>
               <span class="pill">SEM</span>
               <span class="pill">PPC</span>
               <span class="pill">SMM</span>
-              <span class="pill">Website UX Optimization</span>
+              <span class="pill">Website UX</span>
             </div>
           </article>
 
           <article class="card skill-block">
             <h3>CRM & Lifecycle</h3>
             <div class="pill-group">
-              <span class="pill"><i class="si si-salesforce"></i> Salesforce CRM</span>
-              <span class="pill"><i class="si si-leadsquared"></i> LeadSquared CRM</span>
-              <span class="pill"><i class="si si-whatsapp"></i> WhatsApp Marketing</span>
-              <span class="pill"><i class="si si-mailchimp"></i> Email Marketing</span>
-              <span class="pill">🎯 Lead Segmentation</span>
-              <span class="pill">🔁 Consumer Funnel Optimization</span>
+              <span class="pill">Salesforce CRM</span>
+              <span class="pill">LeadSquared CRM</span>
+              <span class="pill">WhatsApp Marketing</span>
+              <span class="pill">Email Marketing</span>
+              <span class="pill">Lead Segmentation</span>
+              <span class="pill">Funnel Optimization</span>
             </div>
           </article>
-          
+
           <article class="card skill-block">
             <h3>Analytics & Reporting</h3>
             <div class="pill-group">
-              <span class="pill"><i class="si si-googleanalytics"></i> GA4</span>
-              <span class="pill"><i class="si si-googlesearchconsole"></i> Search Console</span>
-              <span class="pill"><i class="si si-microsoftexcel"></i> Excel</span>
-              <span class="pill"><i class="si si-looker"></i> Looker Studio</span>
-              <span class="pill">📊 KPI Reporting</span>
-              <span class="pill">📈 ROI Analysis</span>
+              <span class="pill">GA4</span>
+              <span class="pill">Search Console</span>
+              <span class="pill">Looker Studio</span>
+              <span class="pill">KPI Reporting</span>
+              <span class="pill">ROI Analysis</span>
             </div>
           </article>
-          
+
           <article class="card skill-block">
             <h3>Brand & Creative</h3>
             <div class="pill-group">
-              <span class="pill"><i class="si si-canva"></i> Canva</span>
-              <span class="pill"><i class="si si-wordpress"></i> WordPress</span>
-              <span class="pill"><i class="si si-adobe"></i> Adobe Video Editing</span>
-              <span class="pill">🎪 Expo Activation</span>
-              <span class="pill">📺 ATL</span>
-              <span class="pill">🏪 BTL</span>
+              <span class="pill">Canva</span>
+              <span class="pill">WordPress</span>
+              <span class="pill">Video Editing</span>
+              <span class="pill">Expo Activation</span>
             </div>
           </article>
         </div>
@@ -994,12 +660,14 @@
           <span class="eyebrow">Open to digital marketing, growth, CRM, and campaign strategy roles</span>
           <h2>Let’s build measurable growth journeys.</h2>
           <p class="hero-copy" style="margin-inline:auto;">
-            Looking for roles where performance media, CRM intelligence, funnel optimization, and reporting come together to drive business impact.
+            Looking for roles where performance media, CRM intelligence, funnel optimization, and reporting come
+            together to drive business impact.
           </p>
           <div class="contact-actions">
             <a class="btn btn-primary" href="mailto:rajebhosaleshivani@gmail.com">rajebhosaleshivani@gmail.com</a>
             <a class="btn btn-secondary" href="tel:+919082883448">+91 90828 83448</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/shivani-rajebhosale-b117a8179" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/shivani-rajebhosale-b117a8179"
+              target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
           </div>
         </article>
       </div>
@@ -1011,5 +679,93 @@
       Built as a GitHub Pages-ready portfolio website for Shivani R. Rajebhosale.
     </div> -->
   </footer>
+
+  <script>
+    const roles = ["Digital Marketing Strategist", "Integrated Campaign Strategist", "Performance Marketer", "CRM Specialist"];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typeElement = document.getElementById("typewriter");
+
+    function typeEffect() {
+      const currentRole = roles[roleIndex];
+      if (isDeleting) {
+        typeElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typeElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+      let typeSpeed = isDeleting ? 40 : 100;
+      if (!isDeleting && charIndex === currentRole.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typeSpeed = 500;
+      }
+      setTimeout(typeEffect, typeSpeed);
+    }
+    if (typeElement) setTimeout(typeEffect, 1000);
+
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function init() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      particles = [];
+      let particleCount = Math.floor(width * height / 12000);
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 2 + 0.5,
+          dx: (Math.random() - 0.5) * 0.7,
+          dy: (Math.random() - 0.5) * 0.7,
+          alpha: Math.random() * 0.6 + 0.2
+        });
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, width, height);
+      
+      for (let i = 0; i < particles.length; i++) {
+        let p = particles[i];
+        p.x += p.dx;
+        p.y += p.dy;
+        
+        if (p.x < 0 || p.x > width) p.dx = -p.dx;
+        if (p.y < 0 || p.y > height) p.dy = -p.dy;
+        
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(133, 76, 230, ${p.alpha})`;
+        ctx.fill();
+        
+        for (let j = i + 1; j < particles.length; j++) {
+          let p2 = particles[j];
+          let dist = Math.sqrt(Math.pow(p.x - p2.x, 2) + Math.pow(p.y - p2.y, 2));
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `rgba(133, 76, 230, ${0.15 * (1 - dist/150)})`;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    window.addEventListener('resize', init);
+    init();
+    animate();
+  </script>
 </body>
+
 </html>
