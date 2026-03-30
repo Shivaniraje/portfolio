@@ -222,6 +222,18 @@
       border: 1px solid rgba(148, 163, 184, 0.12);
     }
 
+    .stat-icon {
+      width: 28px;
+      height: 28px;
+      margin-bottom: 12px;
+      color: var(--accent);
+      opacity: 0.9;
+    }
+
+    .stat-icon.trend-down { color: var(--accent-2); }
+    .stat-icon.leads { color: var(--accent-3); }
+    .stat-icon.budget { color: #a855f7; }
+
     .stat .value {
       display: block;
       font-size: 1.5rem;
@@ -538,18 +550,30 @@
         </div>
         <div class="hero-stats" aria-label="highlight metrics">
           <div class="stat">
+            <svg class="stat-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
             <span class="value">30%</span>
             <span class="label">Organic traffic growth</span>
           </div>
           <div class="stat">
+            <svg class="stat-icon trend-down" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+            </svg>
             <span class="value">20%</span>
             <span class="label">Lower cost per lead</span>
           </div>
           <div class="stat">
+            <svg class="stat-icon leads" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
             <span class="value">150+</span>
             <span class="label">Qualified B2B leads/month</span>
           </div>
           <div class="stat">
+            <svg class="stat-icon budget" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
             <span class="value">₹1L+</span>
             <span class="label">Monthly paid media budget</span>
           </div>
@@ -642,7 +666,7 @@
         <div class="grid project-grid">
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GA4 Dashboard Design" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="GA4 Dashboard Design" loading="lazy" />
             </div>
             <h3>📊 GA4 Marketing Performance Dashboard</h3>
             <!-- <p>
@@ -720,7 +744,7 @@
 
           <article class="card project-card">
             <div class="project-image-wrapper">
-              <img src="https://images.unsplash.com/photo-1432888117426-19c23f790bc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SEO Benchmarking" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SEO Benchmarking" loading="lazy" />
             </div>
             <h3>🔍 SEO & Competitor Benchmarking Report</h3>
             <!-- <p>
